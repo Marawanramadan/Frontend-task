@@ -1,0 +1,219 @@
+
+body{
+  margin: 0px;
+  overflow-x: hidden;
+}
+
+@font-face {
+  font-family: "Diodrum";
+  src: url(./fonts/alfont_com_AlFont_com_DiodrumArabic-Regular.ttf);
+}
+.head{
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  margin: 0px;
+  position: absolute;
+  width: 96%;
+}
+
+.head .navbar-icons li{
+  color: white;
+  margin-inline-start: 30px;
+}
+
+.navbar-icons{
+  display: flex;
+  align-items: center;
+}
+
+.weatherItem{
+  display: flex;
+  align-items: center;
+  color: white;
+}
+
+
+
+.weatherItem span{
+  margin-inline-start: 15px;
+}
+
+.head .line{
+  width: 30px;
+  height: 2px;
+  background: white;
+  margin-bottom: 5px;
+}
+
+.background img{
+  width: 100%;
+}
+
+button{
+  background: white;
+  color: #1A3143 !important;
+  padding: 10px 20px;
+  border :1px solid #FFFFFF;
+  font-size: 14px;
+
+}
+
+/*-----First Section-----*/
+
+.content{
+  background: #21436E;
+  padding-bottom: 100px;
+}
+
+.content-title , .content-title2{
+  margin-bottom: 0px;
+  font-family: "Diodrum";
+  font-size: 80px;
+  font-weight: 500;
+  color: white;
+  line-height: 1;
+}
+
+.content-title2{
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.content-text{
+  font-size: 22px;
+  color: white;
+  margin: 10px 0px 50px;
+}
+
+.content-wrap{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+.content img{
+  width: 95%;
+}
+.content button{
+  margin-inline-end: 20px;
+}
+
+/*-----Second Section-----*/
+
+
+.content2{
+  padding: 100px 0px;
+}
+
+.padding{
+  padding-top: 100px;
+}
+
+.title , .sub-title , .text{
+  color: #21436E;
+}
+
+.sub-title{
+  font-size: 104px;
+  font-weight: bold;
+  line-height: 1;
+  margin-bottom: 45px;
+  font-family: "Diodrum";
+
+}
+
+.text{
+  font-size: 18px;
+  margin-bottom: 60px;
+}
+
+.title{
+  font-family: "Diodrum";
+  font-size: 50px;
+  line-height: 1;
+  margin-bottom: 0px;
+  font-weight: bold;
+}
+
+.ant-carousel .slick-dots-bottom {
+  bottom: -59px !important;
+
+}
+
+.ant-carousel .slick-dots li.slick-active {
+  width: 16px !important;
+}
+.ant-carousel .slick-dots li button {
+  width: 100%;
+  height: 15px !important;
+  background: grey !important;
+  border-radius: 50% !important;
+}
+
+.service{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 20px 0px;
+}
+
+.service .service-title{
+  color: #268FB4;
+  font-size: 18px;
+}
+
+.service img{
+  width: 30px;
+  height: 30px;
+}
+
+.service-border{
+  border-bottom: 1px dashed grey;
+  border-top: 1px dashed grey;
+}
+
+.service .desc{
+  color: #757575;
+  font-size: 16px;
+  margin-bottom: 0px;
+}
+/*-----Mobile View-----*/
+
+
+@media only screen and (max-width: 600px) {
+  .collapse-items{
+    display: none;
+  }
+
+  .logo{
+    width: 90px;
+
+  }
+  .content img{
+    width: 100%;
+  }
+  .sub-title{
+    font-size: 60px;
+  
+  }
+  
+  
+  .title{
+    font-size: 30px;
+    
+  }
+  
+
+  .service-border{
+    border-bottom: none;
+    border-top: none;
+  }
+
+  .head{
+    width: 92%;
+  }
+}
