@@ -1,14 +1,10 @@
 import './App.css';
-import 'antd/dist/antd.css';
-import Header from './components/header';
-import FirstSection from './components/firstSection'
-import SecondSection from './components/secondSection';
+
 function App() {
+  console.log("dqdow")
   return (
-    <div>
-    <Header />
-    <FirstSection />
-    <SecondSection />
+    <div className='app'>
+    
     </div>
   );
 }
