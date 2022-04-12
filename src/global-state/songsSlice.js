@@ -28,6 +28,33 @@ export const artistsSlice = createSlice({
       },
   ]
     }]
+    },
+    {
+      name: "Queen",
+      albums : [{
+          name : "album1",
+          songs : [{
+              name : "Rock you",
+              price : 30
+          },
+          {
+            name : "Bohemian Rhapsody ",
+            price : 100
+        },
+    ]
+      }
+    ,{
+        name : "album2",
+        songs : [{
+            name : "Another one bites the dust",
+            price : 50
+        },
+        {
+          name : "Don't Stop Me Now",
+          price : 15
+      },
+  ]
+    }]
     }],
     reducers: {
       increment: (state) => {
