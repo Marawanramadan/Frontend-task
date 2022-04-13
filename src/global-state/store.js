@@ -1,9 +1,13 @@
 import { configureStore } from '@reduxjs/toolkit'
-import counterReducer  from '../global-state/songsSlice'
+import songsSlice  from '../global-state/songsSlice'
 import selectedArtistsSlice from '../global-state/selectedSingersSlice'
+import selectedAlbumsSlice from './selectedAlbumsSlice'
+import selectedSongsSlice from './selectedSongsSlice'
 export default configureStore({
   reducer: {
-    artists: counterReducer,
-    selectedArtists : selectedArtistsSlice
+    songs: songsSlice,
+    selectedArtists : selectedArtistsSlice,
+    selectedAlbums : selectedAlbumsSlice,
+    selectedSongs : selectedSongsSlice
   },
 })

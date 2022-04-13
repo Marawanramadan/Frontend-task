@@ -1,73 +1,60 @@
-import { createSlice } from '@reduxjs/toolkit'
+import { createSlice } from "@reduxjs/toolkit";
 
-export const artistsSlice = createSlice({
-    name: 'artists',
-    initialState: [{
-      name: "Maroon5",
-      albums : [{
-          name : "album1",
-          songs : [{
-              name : "Maps",
-              price : 10
-          },
-          {
-            name : "One More Night",
-            price : 15
-        },
-    ]
-      }
-    ,{
-        name : "album2",
-        songs : [{
-            name : "Cold",
-            price : 20
-        },
-        {
-          name : "Payphone",
-          price : 15
-      },
-  ]
-    }]
+export const songsSlice = createSlice({
+  name: "songs",
+  initialState: [
+    {
+      name: "Maps",
+      price: 10,
+      artist : "Maroon5",
+      album : "Album 1"
     },
     {
-      name: "Queen",
-      albums : [{
-          name : "album1",
-          songs : [{
-              name : "Rock you",
-              price : 30
-          },
-          {
-            name : "Bohemian Rhapsody ",
-            price : 100
-        },
-    ]
-      }
-    ,{
-        name : "album2",
-        songs : [{
-            name : "Another one bites the dust",
-            price : 50
-        },
-        {
-          name : "Don't Stop Me Now",
-          price : 15
-      },
-  ]
-    }]
-    }],
-    reducers: {
-      increment: (state) => {
-        state.value += 1
-      },
-      decrement: (state) => {
-        state.value -= 1
-      },
-      incrementByAmount: (state, action) => {
-        state.value += action.payload
-      },
+      name: "One More Night",
+      price: 15,
+      artist : "Maroon5",
+      album : "Album 1"
     },
-  })
+    {
+      name: "Cold",
+      price: 20,
+      artist : "Maroon5",
+      album : "Album 2"
+    },
+    {
+      name: "Payphone",
+      price: 15,
+      artist : "Maroon5",
+      album : "Album 2"
+    },
+    {
+      name: "Rock you",
+      price: 30,
+      artist : "Queen",
+      album : "Album 3"
+    },
+    {
+      name: "Bohemian Rhapsody ",
+      price: 100,
+      artist : "Queen",
+      album : "Album 3"
+    },
+    {
+      name: "Another one bites the dust",
+      price: 50,
+      artist : "Queen",
+      album : "Album 4"
+    },
+    {
+      name: "Don't Stop Me Now",
+      price: 15,
+      artist : "Queen",
+      album : "Album 4"
+    },
+  ],
+  reducers: {
+   
+  },
+});
 
-
-  export default artistsSlice.reducer
+export default songsSlice.reducer;
