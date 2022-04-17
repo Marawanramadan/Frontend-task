@@ -2,11 +2,13 @@ import React, { useState } from "react";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import Typography from "@mui/material/Typography";
+
 import Box from "@mui/material/Box";
 // import Grid from '@mui/material/Grid';
 import Singers from "./singers";
 import Albums from "./albums";
 import Songs from "./songs";
+import PersonalData from "./personalData";
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
 
@@ -46,16 +48,17 @@ const TabsWrapper = () => {
   return (
      
         <Box sx={{ width: "100%" }}>
-          <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
+          <Box sx={{ borderColor: "divider" }}>
               <>
                 <Tabs
                   value={value}
-                  onChange={handleChange}
                   aria-label="basic tabs example"
                 >
                   <Tab label="Singers" {...a11yProps(0)} />
                   <Tab label="Albums" {...a11yProps(1)} />
                   <Tab label="Songs" {...a11yProps(2)} />
+                  <Tab label="Personal Data" {...a11yProps(3)} />
+
                 </Tabs>
                 <TabPanel value={value} index={0}>
                   <Singers value={value} handleChange={handleChange} />
@@ -68,9 +71,13 @@ const TabsWrapper = () => {
                 <TabPanel value={value} index={2}>
                   <Songs value={value} handleChange={handleChange} />
                 </TabPanel>
+                <TabPanel value={value} index={3}>
+                  <PersonalData value={value} handleChange={handleChange} />
+                </TabPanel>
               </>
            
           </Box>
+         
         </Box>
 
      

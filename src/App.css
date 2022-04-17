@@ -1,5 +1,4 @@
-
-body{
+body {
   margin: 0px;
   overflow-x: hidden;
 }
@@ -9,15 +8,96 @@ body{
   src: url(./fonts/alfont_com_AlFont_com_DiodrumArabic-Regular.ttf);
 }
 
-
-.app{
+.app {
   width: 100%;
   min-height: 100vh;
   display: flex;
   justify-content: center;
   padding: 50px;
+  background: #ffc2c7;
 }
 
-.MuiTabs-flexContainer{
+.card {
+  padding: 50px 30px;
+  border-radius: 15px;
+}
+
+.space-between{
+  display: flex;
   justify-content: space-between;
 }
+
+.MuiTabs-flexContainer {
+  justify-content: space-between;
+}
+
+.error {
+  color: red;
+  font-weight: bold;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+/* Navigation */
+.navigation {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.navigation button {
+  margin-inline-start: 5px;
+  margin-block-start: 10px;
+  background: #fbfbfb;
+  color: black;
+}
+.navigation button:hover {
+  background: #f41f4e;
+}
+/* Personal form */
+
+.personal-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 30%;
+  margin: auto;
+  padding: 25px;
+  border-radius: 15px;
+  background: #fbfbfb;
+}
+
+.personal-form .MuiInput-root {
+  margin-bottom: 16px;
+}
+
+/* songs-counter */
+
+.counter-wrapper {
+  justify-content: flex-end;
+  display: flex;
+}
+.counter-wrapper .card{
+  height: 200px;
+  margin-top: 50px;
+}
+
+@media screen and (max-width: 600px) {
+  .app {
+    padding: 25px;
+  }
+
+  .counter-wrapper .card{
+    margin-top: 0px;
+  }
+}
+

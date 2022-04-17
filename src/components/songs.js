@@ -3,7 +3,8 @@ import { useSelector , useDispatch} from 'react-redux'
 import Grid from "@mui/material/Grid";
 import Checkbox from "@mui/material/Checkbox";
 import { addSongs } from '../global-state/selectedSongsSlice';
-export default function Songs() {
+import NavigationButtons from './NavigationButtons';
+export default function Songs({handleChange}) {
 
   const songs = useSelector(state => state.songs)
   const selectedAlbums = useSelector(state => state.selectedAlbums.value)
@@ -12,9 +13,7 @@ export default function Songs() {
   const [selectedSongs , setSelectedSongs] = useState(selectedSongsRedux)
   const dispatch = useDispatch()
 
-  const handleChange = (e , v)=>{
-    console.log(e.target.value)
-    console.log(v)
+  const onChange = (e , v)=>{
     let selectedSongsCopy = [...selectedSongs]
 
     if(v){
@@ -27,8 +26,6 @@ export default function Songs() {
     }
 }
 
-
- 
   useEffect(()=>{
     dispatch(addSongs(selectedSongs))
   },[selectedSongs])
@@ -38,7 +35,7 @@ export default function Songs() {
     <Grid container spacing={2}>
         {songs.filter(song => selectedAlbums.includes(song.album)).map((song) => {
           return (
-            <Grid key={song.name} item xs={4}>
+            <Grid key={song.name} item sm={4} xs={12}>
               <div className="card">
                 <p>Song : {song.name}</p>
                 <p>Artist : {song.artist}</p>
@@ -46,13 +43,15 @@ export default function Songs() {
                 <Checkbox
                   defaultChecked={selectedSongs.includes(song.name)}
                   value={song.name}
-                  onChange={handleChange}
+                  onChange={onChange}
                 />
               </div>
             </Grid>
           );
         })}
       </Grid>
+
+      <NavigationButtons prevDisabled={false} nextDisabled={selectedSongs.length === 0} handleChange={handleChange} value={2} />
   </div>;
 }
 
